@@ -6,7 +6,7 @@ ENV PYTHONDONTWRITEBYTECODE 1
 ENV PYTHONUNBUFFERED 1
 
 # Set work directory
-WORKDIR /app
+WORKDIR /app/backend
 
 # Install PostgreSQL client
 RUN apt-get update && apt-get install -y \
