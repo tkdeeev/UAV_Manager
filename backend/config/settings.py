@@ -46,13 +46,12 @@ INSTALLED_APPS = [
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    'corsheaders.middleware.CorsMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
     'django.contrib.messages.middleware.MessageMiddleware',
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
-    'corsheaders.middleware.CorsMiddleware',
-    'django.middleware.common.CommonMiddleware',
 ]
 
 ROOT_URLCONF = 'config.urls'
@@ -192,16 +191,7 @@ SIMPLE_JWT = {
     # Additional settings can be added as needed.
 }
 
-CORS_ALLOW_ALL_ORIGINS = False
-
-# Replace the CORS settings with these explicit configurations
-CORS_ALLOWED_ORIGINS = [
-    FRONTEND_URL,
-    "http://localhost:5175",
-    "http://localhost:5173",
-]
-
-# Add additional CORS settings for handling preflight requests
+CORS_ALLOW_ALL_ORIGINS = True
 CORS_ALLOW_CREDENTIALS = True
 CORS_ALLOW_METHODS = [
     'DELETE',
