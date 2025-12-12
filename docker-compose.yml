@@ -32,7 +32,7 @@ services:
       dockerfile: Dockerfile
     restart: always
     ports:
-      - "8000:8000"
+      - "8010:8010"
     depends_on:
       - db
     environment:
