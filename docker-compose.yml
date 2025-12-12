@@ -42,8 +42,6 @@ services:
       - POSTGRES_HOST=db
       - FRONTEND_URL=http://${API_HOST}:5175
       - ALLOWED_HOSTS=${API_HOST},localhost,127.0.0.1
-    volumes:
-      - ./backend:/app
 
   frontend:
     build:
